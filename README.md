@@ -8,4 +8,4 @@ Aula de Administração de Serviços Web - Ifal campus Rio Largo
 
 docker build -t <nome_imagem> .
 
-docker run -it -d --name webserver -p 80:80 <nome_imagem>
+docker run -it -d --name webserver -p 80:80 -v /root/web-server/site:/var/www/html <nome_imagem>
