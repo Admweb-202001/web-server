@@ -7,7 +7,7 @@ Passos
 
   cd web-server/ftp-server
   
-  build -t <nomeP_imagem> .
+ docker build -t <nome_imagem> .
   
 2. Criar o container a partir da imagem criada no passo 1:
 
@@ -15,7 +15,7 @@ docker run -it -d --name ftp-server -p 20:20 -p 21:21 -v /root/web-server/site:/
 
 3. Configurar a senha do usuario admweb:
 
-passwd admweb
+docker exec -it ftp-server passwd admweb
 
 4. Iniciar o serviço FTP
 
